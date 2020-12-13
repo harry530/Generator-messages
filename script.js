@@ -20,6 +20,6 @@ const msgArray = ['Act as if what you do makes a difference. It does.',
 'You must do the things you think you cannot do.'];
 const msgRandom = () => {
     const x = Math.floor(Math.random() * 20);
-    console.log(msgArray[x]);
+    console.log(msgArray[x] + '-----');
 };
 msgRandom();
