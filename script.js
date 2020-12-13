@@ -1,25 +1,31 @@
-const msgArray = ['Act as if what you do makes a difference. It does.', 
-'Success is not final, failure is not fatal: it is the courage to continue that counts.', 
-'Never bend your head. Always hold it high. Look the world straight in the eye.', 
-'What you get by achieving your goals is not as important as what you become by achieving your goals.',
-'Believe you can and you\'re halfway there.', 
-'When you have a dream, you\'ve got to grab it and never let go.', 
-'I can\'t change the direction of the wind, but I can adjust my sails to always reach my destination.',
-'No matter what you\'re going through, there\'s a light at the end of the tunnel.',
-'It is our attitude at the beginning of a difficult task which, more than anything else, will affect its successful outcome.',
-'Life is like riding a bicycle. To keep your balance, you must keep moving.',
-'Just don\'t give up trying to do what you really want to do. Where there is love and inspiration, I don\'t think you can go wrong.',
-'Limit your "always" and your "nevers".',
-'Nothing is impossible. The word itself says "I\'m possible!"',
-'You are never too old to set another goal or to dream a new dream.',
-'Try to be a rainbow in someone else\'s cloud.',
-'You do not find the happy life. You make it.',
-'Inspiration comes from within yourself. One has to be positive. When you\'re positive, good things happen.',
-'Sometimes you will never know the value of a moment, until it becomes a memory.',
-'The most wasted of days is one without laughter.',
-'You must do the things you think you cannot do.'];
+const myObject = {
+    inspirationalMsg: ['Act as if what you do makes a difference. It does.',
+        'Success is not final, failure is not fatal: it is the courage to continue that counts.',
+        'Never bend your head. Always hold it high. Look the world straight in the eye.',
+        'What you get by achieving your goals is not as important as what you become by achieving your goals.',
+        'Believe you can and you\'re halfway there.',
+        'It isn\'t where you came from. It\'s where you\'re going that counts.',
+        'When you have a dream, you\'ve got to grab it and never let go.'],
+    nonsensicalJokes: ['How many ears does Spock have? Three. The left ear, the right ear, and the final front-ear!',
+        'What do you call someone with no body and no nose? Nobody knows!',
+        'What do you call a fish with no eye? Fsh!',
+        'I went to buy some camouflage trousers the other day but I couldn’t find any.',
+        'What do you call a boomerang that doesn’t come back? A stick!',
+        'The rotation of earth really makes my day.',
+        'I once had a teacher with a lazy eye. She couldn’t control her pupils.'],
+    historicalMsg: ['People are trapped in history and history is trapped in them.',
+        'History is who we are and why we are the way we are. ',
+        'Revolutions are the locomotives of history.',
+        'Blood alone moves the wheels of history.',
+        'I do not speak Hebrew, but I understand that it has no word for ‘history’. The closest word for it is memory. ',
+        'Fear not for the future, weep not for the past. ',
+        'History is a relay of revolutions.']
+};
+
 const msgRandom = () => {
-    const x = Math.floor(Math.random() * 20);
-    console.log(msgArray[x] + '-----');
+    const myTab = ['inspirationalMsg', 'nonsensicalJokes', 'historicalMsg'];
+    const x = Math.floor(Math.random() * 3);
+    const y = Math.floor(Math.random() * 7);
+    console.log(myObject[myTab[x]][y]);
 };
 msgRandom();
